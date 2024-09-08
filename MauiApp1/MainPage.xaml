@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage"
+             BackgroundColor="Green">
+    <StackLayout>
+        <Frame 
+            x:Name=""
+            Margin="20"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            BorderColor="Red"
+            CornerRadius="30">
+
+            <CollectionView 
+                x:Name=""
+                ItemsSource="{Binding sausages}"
+                            SelectionMode="Single"
+                            SelectionChanged="CollectionView_SelectionChanged">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame
+                            Margin="10">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding ImageSource}"
+                                       Aspect="Fill"
+                                       WidthRequest="100"
+                                       HeightRequest="80"
+                                       Margin="0, 0, 20, 0"/>
+                                <StackLayout
+                                    Orientation="Vertical"
+                                    Spacing="10"
+                                    >
+                                    <Label 
+                                       
+                                        Text="{Binding BrandName}"
+                                        VerticalOptions="Center"/>
+                                    <Label Text="{Binding Descreption}"
+                                           />
+                                    <Label Text="{Binding Price}"
+                                           HorizontalOptions="End"
+                                           Margin="100, 0, 0, 0"/>
+                                </StackLayout>
+                                    
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </Frame>
+    </StackLayout>
+
+</ContentPage>
