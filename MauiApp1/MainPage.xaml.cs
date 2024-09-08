@@ -20,11 +20,9 @@ namespace MauiApp1
             BindingContext = this;
         }
 
-        private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
         {
-            var popUP = new PopUp();
             this.ShowPopupAsync(new PopUp());
-           
         }
     }
 
